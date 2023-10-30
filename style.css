@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: aqua;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+}
+.container{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+.container header{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+.container .form{
+    margin-top: 30px;
+}
+
+.form .input-box{
+width: 100%;
+margin-top: 20px;
+}
+
+.input-box label{
+    color: #333;
+}
+
+.form :where(.input-box input, .select-box){
+    position: relative;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    border: 1px rgb(13, 13, 14);
+    border-radius: 6px;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: aqua;
+    margin-top: 8px;
+}
+
+
+.form .column{
+    display: flex;
+    column-gap: 15px;
+  
+}
+.form .gender-box{
+    margin-top: 20px;
+}
+.gender-box h3{
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender){
+    display: flex;
+    width: 100%;
+    align-items: center;
+    column-gap: 50px;
+
+}
+
+.address :where(input, .select-box){
+    margin-top: 15px;
+ } 
+.form .gender{
+    column-gap: 5px;
+    cursor: pointer;
+}
+
+.gender input{
+   accent-color: aqua;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+ }
+.select-box select{
+    height:100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: black ;
+    font-size: 1rem;
+}
+
+.form button{
+    height: 55px;
+    width: 100%;
+    color: #fff ;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    font-weight: 400;
+    background-color: aqua;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.form button:hover{
+
+background-color: aquamarine;  
+}
+/*responsive */  
+@media screen and (max-width: 500px) {
+    .form .column{
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender){
+        row-gap: 15px;
+    }
+}
